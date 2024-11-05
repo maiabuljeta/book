@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like A Whisper In The Wind - A Fresh Voice in Philosophy for Your Bookstore</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Garamond', Georgia, serif;
+        }
+
+        body {
+            background: #f8f5f1;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(248, 245, 241, 0.9), rgba(248, 245, 241, 0.9)),
+                        url('/api/placeholder/1920/1080') center/cover;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            padding: 2rem;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #34495e;
+            font-style: italic;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s ease, background 0.3s ease;
+            margin: 1rem;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px);
+            background: #34495e;
+        }
+
+        .book-section {
+            padding: 5rem 2rem;
+            background: #fff;
+        }
+
+        .book-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .book-image {
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .book-details h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .price-info {
+            background: #f8f5f1;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+
+        .market-fit {
+            background: #fff;
+            padding: 5rem 2rem;
+        }
+
+        .market-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: #f8f5f1;
+            padding: 1.5rem;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .book-container, .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .testimonial {
+            font-style: italic;
+            border-left: 4px solid #2c3e50;
+            padding-left: 1rem;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="title">Like A Whisper In The Wind</h1>
+            <p class="subtitle">A thoughtful alternative to cookie-cutter self-help, perfect for discerning Hudson Valley readers</p>
+            <a href="#contact" class="contact-button">Inquire About Wholesale Orders</a>
+        </div>
+    </section>
+
+    <section class="book-section">
+        <div class="book-container">
+            <div>
+                <img src="/api/placeholder/400/600" alt="Book Cover" class="book-image">
+            </div>
+            <div class="book-details">
+                <h2>Why This Book Belongs in Your Store</h2>
+                <p>In a market saturated with formulaic self-help, "Like A Whisper In The Wind" offers your customers something different: authentic wisdom drawn from real-world experiences.</p>
+                
+                <div class="price-info">
+                    <h3>Retail Information</h3>
+                    <p>MSRP: $30.00</p>
+                    <p>Attractive wholesale margins available</p>
+                    <p>Author available for in-store events and signings</p>
+                    <p>Flexible return policy for independent bookstores</p>
+                </div>
+                
+                <h3>Perfect for readers who are:</h3>
+                <ul>
+                    <li>Seeking authentic philosophical insights beyond internet wisdom</li>
+                    <li>Interested in mindfulness and personal growth</li>
+                    <li>Looking for nuanced perspectives on success and fulfillment</li>
+                    <li>Drawn to local voices and experiences</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="market-fit">
+        <div class="market-container">
+            <h2>Why It's Perfect for Hudson Valley Bookstores</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Local Appeal</h3>
+                    <p>Written by a Hudson Valley author and entrepreneur, reflecting local values and perspectives that resonate with your community.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Unique Voice</h3>
+                    <p>Challenges conventional internet wisdom with nuanced, thoughtful insights that appeal to sophisticated readers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Event Potential</h3>
+                    <p>Author available for readings, signings, and philosophical discussions that can drive foot traffic to your store.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Target Audience</h3>
+                    <p>Appeals to the Hudson Valley's educated, mindful demographic seeking authentic perspectives on personal growth.</p>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                "This isn't another quick-fix self-help book. It's a thoughtful exploration of life's complexities, perfect for readers tired of oversimplified internet advice."
+            </div>
+
+            <h3>Topics That Resonate with Local Readers:</h3>
+            <ul>
+                <li>Authentic approaches to personal growth</li>
+                <li>Mindfulness and meditation insights</li>
+                <li>Complex friendship and relationship dynamics</li>
+                <li>Navigating modern definitions of success</li>
+                <li>Finding joy and meaning in everyday life</li>
+            </ul>
+
+            <a href="#contact" class="contact-button">Request Wholesale Information</a>
+        </div>
+    </section>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.from('.book-container', {
+            scrollTrigger: {
+                trigger: '.book-container',
+                start: 'top center',
+                toggleActions: 'play none none reverse'
+            },
+            opacity: 0,
+            y: 50,
+            duration: 1
+        });
+
+        gsap.from('.feature-card', {
+            scrollTrigger: {
+                trigger: '.features-grid',
+                start: 'top center',
+                toggleActions: 'play none none reverse'
+            },
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            stagger: 0.2
+        });
+    </script>
+</body>
+</html>
